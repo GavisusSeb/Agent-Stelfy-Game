@@ -5,12 +5,49 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Main Menu">
+      <sprite>sprites\spr_buttons</sprite>
+    </sprites>
+    <sprites name="Options">
+      <sprite>sprites\spr_options_button</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <fonts name="Main Menu">
+      <font>fonts\fnt_menu_buttons</font>
+    </fonts>
+    <fonts name="Options">
+      <font>fonts\fnt_options_buttons</font>
+    </fonts>
+  </fonts>
   <objects name="objects">
-    <object>objects\obj_github_test</object>
+    <objects name="Main Menu">
+      <object>objects\obj_main_menu_helper</object>
+      <objects name="Menu Buttons">
+        <object>objects\obj_options_button</object>
+        <object>objects\obj_quit_button</object>
+      </objects>
+    </objects>
+    <objects name="Graphics">
+      <objects name="Resolution">
+        <object>objects\obj_resolution_helper</object>
+      </objects>
+    </objects>
+    <objects name="Options">
+      <object>objects\obj_options_helper</object>
+      <objects name="Options Buttons">
+        <object>objects\obj_options_back</object>
+        <object>objects\obj_options_graphics</object>
+      </objects>
+    </objects>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_options</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
