@@ -26,9 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>///Change Resolution to Fit Screen
-window_set_size(display_get_width(),display_get_height());
-
-window_set_fullscreen(true);
+ini_open("Options.ini");
+var isFullscreen = ini_read_real("Graphics","Fullscreen",true);
+var Width = ini_read_real("Graphics","Width",display_get_width());
+var Height = ini_read_real("Graphics","Height",display_get_height());
+ini_close();
+window_set_fullscreen(isFullscreen);
 </string>
           </argument>
         </arguments>

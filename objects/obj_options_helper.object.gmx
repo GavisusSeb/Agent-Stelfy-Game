@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Create Stuff
-instance_create(900,300,obj_options_back);
+instance_create(450,350,obj_options_graphics);
+instance_create(450,500,obj_options_back);
 </string>
           </argument>
         </arguments>

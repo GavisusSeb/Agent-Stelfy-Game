@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="6" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,8 +25,41 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Change to Graphics
-room = rm_graphics_options;
+            <string>///Init Vars
+global.isFullscreen = window_get_fullscreen();
+global.newwidth = window_get_width();
+global.newheight = window_get_height();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Update
+window_set_fullscreen(global.isFullscreen);
+window_set_size(global.newwidth,global.newheight);
+ini_open("Options.ini");
+ini_write_real("Graphics","Fullscreen",window_get_fullscreen());
+ini_write_real("Graphics","Width",window_get_width());
+ini_write_real("Graphics","Height",window_get_height());
+ini_close();
+room_restart();
 </string>
           </argument>
         </arguments>
@@ -52,7 +85,7 @@ room = rm_graphics_options;
             <string>///Draw
 draw_self();
 draw_set_font(fnt_options_buttons);
-draw_text(x+16,y+8,"Graphics");
+draw_text(x+16,y+8,"Apply");
 </string>
           </argument>
         </arguments>
