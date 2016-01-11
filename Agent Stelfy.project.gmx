@@ -55,6 +55,7 @@
         <objects name="Resolution Choose">
           <object>objects\obj_resolution_text</object>
           <object>objects\obj_resolution_choose_helper</object>
+          <object>objects\obj_resolution_var</object>
         </objects>
       </objects>
     </objects>

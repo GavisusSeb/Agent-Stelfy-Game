@@ -27,8 +27,6 @@
             <kind>1</kind>
             <string>///Init Vars
 global.isFullscreen = window_get_fullscreen();
-global.newwidth = window_get_width();
-global.newheight = window_get_height();
 </string>
           </argument>
         </arguments>
@@ -54,10 +52,11 @@ global.newheight = window_get_height();
             <string>///Update
 window_set_fullscreen(global.isFullscreen);
 window_set_size(global.newwidth,global.newheight);
+show_debug_message("Changed Resolution To: " + string(global.newwidth) + "x" + string(global.newheight));
 ini_open("Options.ini");
 ini_write_real("Graphics","Fullscreen",window_get_fullscreen());
-ini_write_real("Graphics","Width",window_get_width());
-ini_write_real("Graphics","Height",window_get_height());
+ini_write_real("Graphics","Width",global.newwidth);
+ini_write_real("Graphics","Height",global.newheight);
 ini_close();
 room_restart();
 </string>

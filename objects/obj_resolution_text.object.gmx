@@ -53,6 +53,8 @@ Height = 0;
             <string>///Change Res
 global.newwidth = Width;
 global.newheight = Height;
+show_debug_message(string(global.newwidth) + "x" + string(global.newheight));
+room_restart();
 room = rm_graphics_options;
 </string>
           </argument>

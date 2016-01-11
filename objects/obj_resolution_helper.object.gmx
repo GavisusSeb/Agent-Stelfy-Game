@@ -28,10 +28,11 @@
             <string>///Change Resolution to Fit Screen
 ini_open("Options.ini");
 var isFullscreen = ini_read_real("Graphics","Fullscreen",true);
-var Width = ini_read_real("Graphics","Width",display_get_width());
-var Height = ini_read_real("Graphics","Height",display_get_height());
+var Width = ini_read_real("Graphics","Width",640);
+var Height = ini_read_real("Graphics","Height",360);
 ini_close();
 window_set_fullscreen(isFullscreen);
+window_set_size(Width,Height);
 </string>
           </argument>
         </arguments>

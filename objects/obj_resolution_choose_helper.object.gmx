@@ -29,6 +29,21 @@
 var ins = instance_create(100,400,obj_resolution_text);
 ins.Width = 640;
 ins.Height = 360;
+var ins = instance_create(100,200,obj_resolution_text);
+ins.Width = 960;
+ins.Height = 640;
+var ins = instance_create(300,400,obj_resolution_text);
+ins.Width = 1360;
+ins.Height = 768;
+var ins = instance_create(300,200,obj_resolution_text);
+ins.Width = 1366;
+ins.Height = 768;
+var ins = instance_create(500,400,obj_resolution_text);
+ins.Width = 1920;
+ins.Height = 1080;
+var ins = instance_create(500,200,obj_resolution_text);
+ins.Width = 1280;
+ins.Height = 720;
 </string>
           </argument>
         </arguments>
